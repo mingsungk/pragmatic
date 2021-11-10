@@ -10,7 +10,7 @@ class ArticleCreationForm(ModelForm):
                                                            'style': 'height: auto;'}))
 
     project = forms.ModelChoiceField(queryset=Project.objects.all(), required=False)
-    
+
     class Meta:
         model = Article
         fields = ['title', 'image', 'project', 'content']
